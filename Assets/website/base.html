@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Asset Management System Prototype{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: darkred;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .nav a, .nav form {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: 2px solid white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: darkred;
+            display: inline-block;
+            text-align: center;
+        }
+        .nav a:hover, .nav form button:hover {
+            background-color: white;
+            color: darkred;
+        }
+        .nav form button {
+            all: unset;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+        .content {
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Asset Management System Prototype</h1>
+    </div>
+    {% if not exclude_nav %}
+    <div class="nav">
+        {% if user.is_authenticated %}
+            {% if user.groups.all|length > 0 %}
+                {% if user.groups.first.name == "Administrator" %}
+                    <a href="{% url 'adminDashboard' %}">Admin Dashboard</a>
+                {% elif user.groups.first.name == "Asset Manager" %}
+                    <a href="{% url 'assetmanagerDashboard' %}">Asset Manager Dashboard</a>
+                {% elif user.groups.first.name == "Technician" %}
+                    <a href="{% url 'technicianDashboard' %}">Technician Dashboard</a>
+                {% elif user.groups.first.name == "Auditor" %}
+                    <a href="{% url 'auditorDashboard' %}">Auditor Dashboard</a>
+                {% elif user.groups.first.name == "Reporter" %}
+                    <a href="{% url 'reporterDashboard' %}">Reporter Dashboard</a>
+                {% else %}
+                    <a href="{% url 'userDashboard' %}">User Dashboard</a>
+                {% endif %}
+            {% endif %}
+            <a href="{% url 'createAsset' %}">Add Asset</a>
+            <a href="{% url 'viewAssets' %}">View Assets</a>
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'register' %}">Register</a>
+        <a href="{% url 'logout' %}" method="post">Logout</a>
+        {% endif %}
+    </div>
+    {% endif %}
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

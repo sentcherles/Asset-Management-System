@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+Add New Asset
+{% endblock %}
+{% block content %}
+<h2 style="color: white;">Add New Asset</h2>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary" style="background-color: #b30000; color: white; border: none; padding: 10px 20px; border-radius: 5px;">
+        Save Asset
+    </button>
+</form>
+<a href="{% url 'viewAssets' %}" style="color: white; text-decoration: none; margin-top: 10px; display: inline-block;">
+    Back to Assets </a>
+{% endblock %}

@@ -1,0 +1,43 @@
+* {
+    background-color: #8B0000;
+}
+
+body, .colM, .breadcrumbs {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+h1, h2, h3, p, a, span, label, th, td {
+    color: #ffffff;
+}
+
+h2 {
+    background-color: #8B0000;
+    color: #ffffff;
+}
+
+button, input[type="submit"] {
+    background-color: #8B0000;
+    border-color: #8B0000;
+    color: #ffffff;
+}
+
+a:hover {
+    color: #ffcccc;
+}
+
+#sidebar {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+th {
+    background-color: #8B0000;
+    color: #ffffff;
+}
+
+input, select, textarea {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #8B0000;
+}

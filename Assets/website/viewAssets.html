@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Assets List</h2>
+<table borde    r="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Serial Number</th>
+            <th>Manufacturer</th>
+            <th>Date Purchased</th>
+            <th>State</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for asset in assets %}
+        <tr>
+            <td>{{ asset.name }}</td>
+            <td>{{ asset.serialNumber }}</td>
+            <td>{{ asset.manufacturer }}</td>
+            <td>{{ asset.datePurchased }}</td>
+            <td>{{ asset.state }}</td>
+            <td><a href="{% url 'assetDetail' asset.pk %}">View Details</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'login' %}" style="margin-top: 10px; display: inline-block;">Login</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="header">
+    <h1>Asset Management System Prototype</h1>
+</div>
+<div class="nav">
+    <a href="{% url 'rootView' %}">Testing Dashboard</a>
+</div>
+
+<h2>Modify Asset</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Update Asset</button>
+</form>
+{% endblock %}

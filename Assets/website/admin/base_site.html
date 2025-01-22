@@ -1,0 +1,32 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}Prototype Admin Panel{% endblock %}
+
+{% block branding %}
+<div id="header" style="background-color: #8B0000; padding: 15px;">
+    <h1 id="site-name" style="margin: 0; font-size: 1.5em;">
+        <a href="{% url 'admin:index' %}" style="color: white; text-decoration: none;">
+            Prototype Admin Panel
+        </a>
+    </h1>
+</div>
+{% endblock %}
+
+{% block nav-global %}
+<ul id="nav-global" style="list-style: none; display: flex; gap: 15px; padding: 10px; background-color: #8B0000;">
+    <li><a href="https://example.com" target="_blank" style="color: white; text-decoration: none;">Visit Site</a></li>
+    <li><a href="{% url 'logout' %}" style="color: white; text-decoration: none;">Logout</a></li>
+</ul>
+{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin_panel.css' %}">
+{% endblock %}
+
+{% block footer %}
+<div id="footer" style="background-color: #8B0000; padding: 10px; text-align: center;">
+    <p style="margin: 0; color: white;">&copy; CE301 Prototype Admin Panel</p>
+</div>
+{% endblock %}

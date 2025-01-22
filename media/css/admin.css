@@ -1,0 +1,60 @@
+#header {
+    background-color: #8B0000; 
+    padding: 15px;
+}
+
+#header h1, #header a {
+    color: white; 
+    text-decoration: none;
+}
+
+div.breadcrumbs {
+    background-color: #8B0000; 
+    color: white; 
+    padding: 10px 15px;
+}
+
+#header a:hover {
+    color: #ffcccc; 
+}
+
+th {
+    background-color: #8B0000; 
+    color: white; 
+    padding: 10px 16px; 
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000; 
+}
+
+caption, .module caption {  
+    background-color: #8B0000; 
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px;
+}
+
+thead th {
+    background-color: #8B0000; 
+    color: #ffffff;
+}
+
+a {
+    color: #8B0000; 
+}
+
+a:hover {
+    color: #800000; 
+}
+
+#sidebar {
+    background-color: #ffffff;
+    color: #000000; 
+}
+
+.module {
+    border: 1px solid #8B0000; 
+    background-color: #ffffff;
+}

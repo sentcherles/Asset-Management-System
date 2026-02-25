@@ -67,3 +67,18 @@ Project Structure
 Notes
 
   This project was developed for academic purposes and is intended as a demonstration of a full-stack asset management system using Django. It is not production-hardened.
+
+<img width="324" height="422" alt="image" src="https://github.com/user-attachments/assets/fa5540fd-19f6-4d2b-a477-3510816c933b" />
+<img width="692" height="608" alt="image" src="https://github.com/user-attachments/assets/061b6171-9c41-4616-b1cd-de2328ca4c7e" />
+<img width="694" height="175" alt="image" src="https://github.com/user-attachments/assets/8bd8524d-cbeb-4a27-b213-14c9ebb1f6c0" />
+<img width="656" height="188" alt="image" src="https://github.com/user-attachments/assets/df31d38e-8220-45db-aeab-f1bc64079839" />
+<img width="235" height="421" alt="image" src="https://github.com/user-attachments/assets/7f359067-628c-4272-9636-41bdddb42d71" />
+<img width="353" height="412" alt="image" src="https://github.com/user-attachments/assets/31734833-59b6-46dd-a054-3381a78e543c" />
+<img width="672" height="229" alt="image" src="https://github.com/user-attachments/assets/36097741-3858-4586-9cb2-d42de67f8c76" /><img width="694" height="175" alt="image" src="https://github.com/user-attachments/assets/13c05b08-ef1a-4aaa-b15c-d429168fd9f5" />
+
+
+
+
+
+
+	
